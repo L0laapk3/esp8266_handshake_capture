@@ -1,5 +1,5 @@
 Attempt to capture 4 way handshake with ESP.
-Used ernacktobs esp8266_wifi_raw half reverse engineered SDK as a base.
+Used [ernacktobs esp8266_wifi_raw](https://github.com/ernacktob/esp8266_wifi_raw) half reverse engineered SDK as a base.
 
 current status:
 - Can pick up and identify all 4 handshake packets and dump them into serial. This can be analysed with wireshark.
@@ -9,6 +9,6 @@ current status:
 
 Promiscous mode does not capture full packets, only the first 128 - x bytes. This makes it not suitable for capture for handshake capture. I managed to get around this by setting the sender IP to the IP of the access point, and the destination IP to the target IP. I'm not 100% sure why the ESP captures its 'own' packets and triggers the underlying functions. But it works. :D
 
-To compile this program, please refer to the upstream git. I have used the arduino compiled version of this because I'm lazy. I have mirrored the readme in README_OLD.md.
+To compile this program, please refer to the upstream git. I have used the [arduino compiled version of this by emelianov](https://github.com/emelianov/esp8266_wifi_raw) because I'm lazy. I have mirrored the readme in README_OLD.md.
 
 If there are any questions, feel free to get in touch with me by making an issue.
